@@ -1,0 +1,325 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="icon" type="image/jpeg" href="logo.jpg"> 
+    <title>Hardware - Computer Systems and Components Learning Website</title> 
+    <meta name="description" content="Learn about computer hardware: processing units, 
+memory, storage, and peripherals."> 
+    <link rel="stylesheet" href="style.css"> 
+</head> 
+<body> 
+ 
+    <header class="header"> 
+        <div class="logo-title-container"> 
+            <img src="logo.jpg" alt="CSCLW Logo" class="csclw-img-logo" width="90" height="90"> 
+            <div> 
+                <h1>CSCLW</h1> 
+                <p>Computer Systems and Components Learning Website</p> 
+            </div> 
+        </div> 
+ 
+        <nav> 
+            <a href="index.html">Home</a> 
+ 
+            <div class="dropdown"> 
+                <a href="hardware.html" class="active" aria-current="page">Hardware</a> 
+                <details class="dropdown-details" name="nav-dropdowns"> 
+                    <summary class="dropdown-toggle" aria-label="Show Hardware sections"><span 
+aria-hidden="true">▾</span></summary> 
+                    <div class="dropdown-content" id="hardware-menu"> 
+                        <a href="hardware.html#processing">Processing Units</a> 
+                        <a href="hardware.html#storage">Storage &amp; Memory</a> 
+                        <a href="hardware.html#peripherals">Peripherals</a> 
+                    </div> 
+                </details> 
+            </div> 
+ 
+            <div class="dropdown"> 
+                <a href="software.html">Software</a> 
+                <details class="dropdown-details" name="nav-dropdowns"> 
+                    <summary class="dropdown-toggle" aria-label="Show Software sections"><span 
+aria-hidden="true">▾</span></summary> 
+                    <div class="dropdown-content" id="software-menu"> 
+                        <a href="software.html#os">Operating Systems</a> 
+                        <a href="software.html#apps">Applications</a> 
+                    </div> 
+                </details> 
+            </div> 
+ 
+            <div class="dropdown"> 
+                <a href="importance.html">Importance</a> 
+                <details class="dropdown-details" name="nav-dropdowns"> 
+                    <summary class="dropdown-toggle" aria-label="Show Importance sections"><span 
+aria-hidden="true">▾</span></summary> 
+                    <div class="dropdown-content" id="importance-menu"> 
+                        <a href="importance.html#efficiency">System Efficiency</a> 
+                        <a href="importance.html#maintenance">Maintenance Steps</a> 
+                    </div> 
+                </details> 
+            </div> 
+ 
+            <a href="references.html">References</a> 
+        </nav> 
+    </header> 
+ 
+    <main> 
+    <section id="hardware-intro"> 
+        <h2>Computer Hardware Overview</h2> 
+        <p>Hardware refers to the physical elements that make up a computer system.</p> 
+ 
+        <h3>Key Hardware Categories:</h3> 
+        <ul class="custom-list"> 
+            <li><strong>Central Processing Unit (CPU):</strong> Executes program instructions 
+and performs calculations.</li> 
+            <li><strong>Random Access Memory (RAM):</strong> Provides temporary high-speed 
+data storage for active apps.</li> 
+            <li><strong>Storage Devices (SSD / HDD):</strong> Holds non-volatile data, files, and 
+operating systems.</li> 
+            <li><strong>Graphics Processing Unit (GPU):</strong> Handles rendering of graphics 
+and visual output.</li> 
+            <li><strong>Motherboard:</strong> Connects all system components together via data 
+pathways.</li> 
+        </ul> 
+    </section> 
+ 
+    <section id="processing"> 
+        <h2>Processing Units</h2> 
+        <p> 
+            The processing unit is the "brain" of the computer. It executes instructions, 
+            performs arithmetic and logic operations, and coordinates the flow of data 
+            between the other components. 
+        </p> 
+ 
+        <div class="components"> 
+            <div class="card"> 
+                <h3>
+🧠
+ CPU (Central Processing Unit)</h3> 
+                <p> 
+                    Runs the operating system and applications. Its cores, clock speed, 
+                    and cache size determine how quickly instructions are processed. 
+                </p> 
+            </div> 
+            <div class="card"> 
+                <h3>
+🎮
+ GPU (Graphics Processing Unit)</h3> 
+                <p> 
+                    Renders images, video, and 3D graphics. Its many parallel cores also 
+                    speed up tasks such as video editing and 3D rendering. 
+                </p> 
+            </div> 
+            <div class="card"> 
+                <h3>
+⚡
+ CPU Cache</h3> 
+                <p> 
+                    A small, ultra-fast memory built into the processor that stores the 
+                    data and instructions the CPU is most likely to use next. 
+                </p> 
+            </div> 
+        </div> 
+    </section> 
+ 
+    <section id="storage"> 
+        <h2>Storage &amp; Memory</h2> 
+        <p> 
+            Memory and storage work together, but they serve different purposes. RAM is 
+            the temporary workspace for programs that are currently running, while an SSD 
+            or HDD keeps files and the operating system permanently. 
+        </p> 
+ 
+        <div class="components"> 
+            <div class="card"> 
+                <h3>
+⚡
+ RAM</h3> 
+                <p>Volatile memory that holds active programs and data for quick access by the 
+CPU.</p> 
+            </div> 
+            <div class="card"> 
+                <h3>
+💾
+ SSD</h3> 
+                <p>Non-volatile flash storage with fast boot times, quick file access, and no moving 
+parts.</p> 
+            </div> 
+            <div class="card"> 
+                <h3>
+🗄
+ HDD</h3> 
+                <p>Non-volatile magnetic storage with a high capacity at a lower cost per 
+gigabyte.</p> 
+            </div> 
+        </div> 
+ 
+        <h3>Memory vs. Storage Comparison</h3> 
+        <p>Understanding the distinction between primary volatile memory and secondary 
+permanent storage:</p> 
+ 
+        <div class="table-responsive"> 
+            <table class="data-table"> 
+                <thead> 
+                    <tr> 
+                        <th>Component</th> 
+                        <th>Type</th> 
+                        <th>Volatility</th> 
+                        <th>Speed</th> 
+                        <th>Primary Function</th> 
+                    </tr> 
+                </thead> 
+                <tbody> 
+                    <tr> 
+                        <td><strong>RAM</strong></td> 
+                        <td>Primary Memory</td> 
+                        <td>Volatile (Lost on power off)</td> 
+                        <td>Ultra-Fast</td> 
+                        <td>Holds active software data for the CPU</td> 
+                    </tr> 
+                    <tr> 
+                        <td><strong>SSD (NVMe / SATA)</strong></td> 
+                        <td>Secondary Storage</td> 
+                        <td>Non-Volatile (Permanent)</td> 
+                        <td>Fast</td> 
+                        <td>Boots OS and stores permanent files</td> 
+                    </tr> 
+                    <tr> 
+                        <td><strong>HDD</strong></td> 
+                        <td>Secondary Storage</td> 
+                        <td>Non-Volatile (Permanent)</td> 
+                        <td>Moderate</td> 
+                        <td>High-capacity budget data backup</td> 
+                    </tr> 
+                </tbody> 
+            </table> 
+        </div> 
+    </section> 
+ 
+    < 
+<section id="peripherals"> 
+    <h2>Peripherals &amp; I/O Devices</h2> 
+ 
+    <p> 
+        Peripheral devices are external or additional computer devices 
+        that allow users to input information, receive output, and 
+        communicate with a computer system. Hover over or click each 
+        device to learn more about its definition, purpose, and origin. 
+    </p> 
+ 
+    <div class="peripheral-list"> 
+ 
+        <details class="peripheral-item"> 
+            <summary>Keyboard</summary> 
+            <div class="peripheral-info"> 
+                <img src="image/keyboard.jpeg" alt="Computer keyboard"> 
+                <div> 
+                    <h3>Keyboard</h3> 
+                    <p><strong>Definition:</strong> An input device containing keys used to enter 
+letters, numbers, and commands into a computer.</p> 
+                    <p><strong>Purpose:</strong> Allows users to type documents, enter data, and 
+control computer functions.</p> 
+                    <p><strong>Origin:</strong> Its design developed from mechanical typewriters, 
+particularly the typewriter patented by Christopher Latham Sholes in 1868.</p> 
+                </div> 
+            </div> 
+        </details> 
+ 
+        <details class="peripheral-item"> 
+            <summary>Mouse</summary> 
+            <div class="peripheral-info"> 
+                <img src="image/mouse.jpeg" alt="Computer mouse"> 
+                <div> 
+                    <h3>Mouse</h3> 
+                    <p><strong>Definition:</strong> A pointing input device used to control the cursor 
+on a computer screen.</p> 
+                    <p><strong>Purpose:</strong> Allows users to point, click, select, drag, and 
+navigate items on the screen.</p> 
+                    <p><strong>Origin:</strong> The first computer mouse prototype was developed 
+by Douglas Engelbart in 1964.</p> 
+                </div> 
+            </div> 
+        </details> 
+ 
+        <details class="peripheral-item"> 
+            <summary>Monitor</summary> 
+            <div class="peripheral-info"> 
+                <img src="image/monitor.jpeg" alt="Computer monitor"> 
+                <div> 
+                    <h3>Monitor</h3> 
+                    <p><strong>Definition:</strong> An output device that displays visual information 
+generated by a computer.</p> 
+                    <p><strong>Purpose:</strong> Shows text, images, videos, graphics, and other 
+computer output.</p> 
+                    <p><strong>Origin:</strong> Early computer displays evolved from technologies 
+such as cathode-ray tubes (CRTs), which were adapted for computer use.</p> 
+                </div> 
+            </div> 
+        </details> 
+ 
+        <details class="peripheral-item"> 
+            <summary>Printer</summary> 
+            <div class="peripheral-info"> 
+                <img src="image/printer.jpeg" alt="Computer printer"> 
+                <div> 
+                    <h3>Printer</h3> 
+                    <p><strong>Definition:</strong> An output device that produces physical copies of 
+digital documents and images.</p> 
+                    <p><strong>Purpose:</strong> Prints schoolwork, reports, photographs, and other 
+digital materials onto paper.</p> 
+                    <p><strong>Origin:</strong> Modern computer printers developed from earlier 
+printing technologies, including mechanical line printers used with early computers.</p> 
+                </div> 
+            </div> 
+        </details> 
+ 
+        <details class="peripheral-item"> 
+            <summary>Speakers</summary> 
+            <div class="peripheral-info"> 
+                <img src="image/speaker.jpeg" alt="Computer speakers"> 
+                <div> 
+                    <h3>Speakers</h3> 
+                    <p><strong>Definition:</strong> Audio output devices that convert electrical 
+signals into sound.</p> 
+                    <p><strong>Purpose:</strong> Allow users to hear music, videos, notifications, 
+and other computer audio.</p> 
+                    <p><strong>Origin:</strong> They developed from the early loudspeaker 
+technologies introduced during the late 19th and early 20th centuries.</p> 
+                </div> 
+            </div> 
+        </details> 
+ 
+        <details class="peripheral-item"> 
+            <summary>Microphone</summary> 
+            <div class="peripheral-info"> 
+                <img src="image/microphone.jpeg" alt="Computer microphone"> 
+                <div> 
+                    <h3>Microphone</h3> 
+                    <p><strong>Definition:</strong> An input device that converts sound waves into 
+electrical or digital signals.</p> 
+                    <p><strong>Purpose:</strong> Records audio and allows users to communicate 
+through voice calls, meetings, and recordings.</p> 
+                    <p><strong>Origin:</strong> Early microphone technology emerged during the 
+development of the telephone in the 19th century.</p> 
+                </div> 
+            </div> 
+        </details> 
+ 
+        <details class="peripheral-item"> 
+            <summary>Webcam</summary> 
+            <div class="peripheral-info"> 
+                <img src="image/webcam.jpeg" alt="Computer webcam"> 
+                <div> 
+                    <h3>Webcam</h3> 
+                    <p><strong>Definition:</strong> A digital camera designed to capture images and 
+videos for a computer.</p> 
+                    <p><strong>Purpose:</strong> Used for video conferences, online classes, live 
+streaming, and video recording.</p> 
+                    <p><strong>Origin:</strong> One of the earliest webcams was developed at the 
+University of Cambridge in 1991 to monitor a coffee pot.</p> 
+</div> 
+</div> 
+</details> 
+</div> 
+</section> 

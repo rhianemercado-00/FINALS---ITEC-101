@@ -1,0 +1,638 @@
+/* ==========================================
+1. GLOBAL STYLES (Background, Font, at Body)
+========================================== */
+:root {
+--brand: #210056;
+--brand-dark: #170d2f;
+--brand-light: #350882;
+--accent: #7c3aed;
+--accent-cyan: #22d3ee;
+--bg-deep: #04010d;
+--text: #333;
+}
+* {
+box-sizing: border-box;
+}
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+margin: 0;
+padding: 0;
+color: var(--text);
+min-height: 100vh;
+overflow-x: hidden;
+background-color: var(--bg-deep);
+background-image:
+radial-gradient(circle at 24% 32%, rgba(255, 255, 255, 0.62) 0 1px, transparent 1.7px),
+radial-gradient(circle at 68% 62%, rgba(34, 211, 238, 0.5) 0 1px, transparent 1.8px),
+radial-gradient(circle at 42% 82%, rgba(167, 139, 250, 0.55) 0 1px, transparent 1.8px),
+radial-gradient(circle at 18% 22%, rgba(124, 58, 237, 0.34) 0, transparent 36%),
+radial-gradient(circle at 82% 12%, rgba(34, 211, 238, 0.17) 0, transparent 30%),
+radial-gradient(circle at 52% 100%, rgba(88, 28, 135, 0.42) 0, transparent 48%),
+linear-gradient(180deg, #04010d 0%, #090120 34%, #11002d 68%, #04010d 100%);
+background-size:
+180px 180px,
+260px 260px,
+220px 220px,
+auto,
+auto,
+auto,
+auto;
+background-position:
+0 0,
+70px 110px,
+130px 40px,
+0 0,
+0 0,
+0 0,
+0 0;
+background-repeat: repeat, repeat, repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+background-attachment: fixed;
+}
+/* Fixed futuristic backdrop layers. */
+body::before,
+body::after {
+content: "";
+position: fixed;
+z-index: 0;
+pointer-events: none;
+}
+/* Perspective neon grid along the bottom of the viewport. */
+body::before {
+left: -25%;
+bottom: -5vh;
+width: 150%;
+height: 60vh;
+background-image:
+linear-gradient(rgba(124, 58, 237, 0.55) 1.5px, transparent 1.5px),
+linear-gradient(90deg, rgba(34, 211, 238, 0.4) 1.5px, transparent 1.5px);
+background-size: 64px 64px;
+transform: perspective(650px) rotateX(52deg);
+transform-origin: center bottom;
+-webkit-mask-image: linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0.75) 45%, transparent
+92%);
+mask-image: linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0.75) 45%, transparent 92%);
+animation: grid-slide 18s linear infinite;
+opacity: 0.85;
+will-change: background-position;
+}
+/* Slow-moving aurora bloom in the top-right corner. */
+body::after {
+top: -20vmax;
+right: -16vmax;
+width: 62vmax;
+height: 62vmax;
+border-radius: 50%;
+background: radial-gradient(
+circle,
+rgba(34, 211, 238, 0.16) 0%,
+rgba(124, 58, 237, 0.2) 38%,
+transparent 70%
+);
+animation: aurora-float 24s ease-in-out infinite alternate;
+opacity: 0.85;
+will-change: transform;
+}
+header,
+main,
+footer {
+position: relative;
+}
+header {
+z-index: 2;
+}
+main,
+footer {
+z-index: 1;
+}
+@keyframes grid-slide {
+from {
+background-position: 0 0, 0 0;
+}
+to {
+background-position: 0 64px, 64px 0;
+}
+}
+@keyframes aurora-float {
+0% {
+transform: translate3d(0, 0, 0) scale(1);
+}
+50% {
+transform: translate3d(-7vw, 5vh, 0) scale(1.08);
+}
+100% {
+transform: translate3d(3vw, -4vh, 0) scale(0.96);
+}
+}
+img {
+max-width: 100%;
+height: auto;
+}
+a:focus-visible,
+summary:focus-visible {
+outline: 2px solid var(--accent);
+outline-offset: 2px;
+}
+/* ==========================================
+2. HEADER & NAVIGATION STYLES (Menu at Logo)
+========================================== */
+header {
+background-color: var(--brand);
+background-image: linear-gradient(120deg, rgba(9, 3, 24, 0.96), rgba(33, 0, 86, 0.86));
+color: white;
+padding: 10px 40px 10px 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: 16px;
+border-bottom: 1px solid rgba(34, 211, 238, 0.22);
+box-shadow: 0 12px 40px rgba(0, 0, 0, 0.38), 0 0 35px rgba(124, 58, 237, 0.16);
+-webkit-backdrop-filter: blur(14px);
+backdrop-filter: blur(14px);
+}
+.logo-title-container {
+display: flex;
+align-items: center;
+gap: 15px;
+}
+.logo-title-container h1 {
+margin: 0;
+font-size: 28px;
+transition: transform 0.3s ease;
+}
+/* Hover effect kapag tinutok ang mouse sa title */
+.logo-title-container:hover h1 {
+transform: scale(1.03);
+color: #d1c4e9;
+}
+.logo-title-container p {
+margin: 2px 0 0 0;
+font-size: 14px;
+color: #d1c4e9;
+}
+/* Logo Image Hover Effect (Umiikot at lumalaki) */
+.csclw-img-logo {
+display: block;
+width: 90px;
+height: 90px;
+border-radius: 50%;
+object-fit: cover;
+background-color: white;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+flex-shrink: 0;
+transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.csclw-img-logo:hover {
+transform: scale(1.1) rotate(5deg);
+box-shadow: 0 6px 15px rgba(255, 255, 255, 0.4);
+}
+nav {
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+justify-content: flex-end;
+gap: 8px;
+}
+/* Navigation Links Hover Effect */
+nav a {
+color: white;
+text-decoration: none;
+font-weight: bold;
+padding: 10px 16px;
+border-radius: 25px;
+transition: all 0.3s ease;
+}
+nav a:hover,
+nav a.active {
+background-color: var(--brand-dark);
+color: #ffffff;
+transform: translateY(-3px);
+box-shadow: 0 6px 15px rgba(234, 242, 248, 0.4);
+}
+/* ==========================================
+3. DROPDOWN MENU STYLES (Sub-menus)
+========================================== */
+.dropdown {
+position: relative;
+display: inline-flex;
+align-items: center;
+}
+.dropdown-details {
+display: inline-flex;
+align-items: center;
+}
+.dropdown-toggle {
+background: none;
+border: none;
+color: #d1c4e9;
+cursor: pointer;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+font-size: 13px;
+line-height: 1;
+list-style: none;
+min-width: 24px;
+padding: 10px 0;
+margin-left: -6px;
+border-radius: 6px;
+user-select: none;
+transition: color 0.2s ease, transform 0.2s ease;
+}
+.dropdown-toggle::-webkit-details-marker {
+display: none;
+}
+.dropdown-toggle:hover,
+.dropdown-toggle:focus-visible,
+.dropdown-details[open] > .dropdown-toggle {
+color: #ffffff;
+}
+.dropdown-details[open] > .dropdown-toggle {
+transform: rotate(180deg);
+}
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: var(--brand-dark);
+min-width: 200px;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+z-index: 1000;
+border-radius: 10px;
+padding: 8px 0;
+top: 100%;
+left: 0;
+max-width: calc(100vw - 24px);
+}
+.dropdown-content a {
+color: white;
+padding: 10px 16px;
+text-decoration: none;
+display: block;
+text-align: left;
+border-radius: 5px;
+margin: 2px 8px;
+font-size: 14px;
+transition: all 0.2s ease;
+}
+/* Dropdown items hover effect (gumagalaw pakanan) */
+.dropdown-content a:hover {
+background-color: #2e086b;
+transform: translateX(5px);
+box-shadow: none;
+}
+/* Native details handles the submenu toggle without JavaScript. */
+.dropdown-details[open] > .dropdown-content {
+display: block;
+}
+/* ==========================================
+4. SECTIONS & CARDS (Nilalaman at Cards)
+========================================== */
+section {
+padding: 30px;
+margin: 25px auto;
+max-width: 1000px;
+background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(246, 243, 255, 0.96));
+border: 1px solid rgba(124, 58, 237, 0.18);
+border-radius: 12px;
+box-shadow:
+0 18px 50px rgba(0, 0, 0, 0.35),
+0 0 0 1px rgba(255, 255, 255, 0.04),
+0 0 36px rgba(124, 58, 237, 0.08);
+scroll-margin-top: 20px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Section hover effect (umaangat kapag hinover) */
+section:hover {
+transform: translateY(-4px);
+box-shadow:
+0 24px 60px rgba(0, 0, 0, 0.44),
+0 0 45px rgba(124, 58, 237, 0.16);
+}
+section h2 {
+color: var(--brand);
+margin-top: 0;
+transition: color 0.3s ease;
+}
+section:hover h2 {
+color: var(--brand-light);
+}
+section h3 {
+color: #1a5276;
+}
+.components {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+margin-top: 15px;
+}
+/* Card hover effect */
+.card {
+background-color: #eaf2f8;
+padding: 20px;
+border-radius: 10px;
+flex: 1 1 220px;
+text-align: center;
+border-left: 4px solid var(--brand);
+transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+.card:hover {
+transform: translateY(-8px) scale(1.02);
+box-shadow: 0 12px 25px rgba(33, 0, 86, 0.25);
+background-color: #dbeafe;
+}
+.card h3 {
+color: #1a5276;
+margin-top: 0;
+}
+/* ==========================================
+5. LISTS & TABLES (Listahan at Tables)
+========================================== */
+.custom-list,
+.custom-ordered-list {
+line-height: 1.8;
+padding-left: 25px;
+}
+/* List items hover effect */
+.custom-list li,
+.custom-ordered-list li {
+margin-bottom: 8px;
+transition: transform 0.2s ease, color 0.2s ease;
+}
+.custom-list li:hover,
+.custom-ordered-list li:hover {
+transform: translateX(6px);
+color: var(--brand);
+}
+.custom-list a {
+overflow-wrap: anywhere;
+}
+/* Horizontal scroll wrapper so tables never break the layout. */
+.table-responsive {
+width: 100%;
+overflow-x: auto;
+-webkit-overflow-scrolling: touch;
+}
+.data-table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 15px;
+overflow: hidden;
+border-radius: 8px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.data-table th,
+.data-table td {
+border: 1px solid #ddd;
+padding: 12px 15px;
+text-align: left;
+transition: background-color 0.2s ease;
+}
+.data-table th {
+background-color: var(--brand);
+color: white;
+}
+.data-table tr:nth-child(even) {
+background-color: #f8f9fa;
+}
+/* Table rows hover effect */
+.data-table tr:hover {
+background-color: #e2e8f0;
+}
+/* ==========================================
+6. FOOTER STYLES (Pang-ibaba)
+========================================== */
+footer {
+background: linear-gradient(180deg, #0c041c, #05010d);
+color: #ded8f0;
+text-align: center;
+padding: 15px 180px;
+margin-top: 50px;
+border-top: 1px solid rgba(34, 211, 238, 0.2);
+box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.3);
+transition: border-color 0.3s ease, color 0.3s ease;
+}
+footer:hover {
+background: linear-gradient(180deg, #160733, #080218);
+border-top-color: rgba(34, 211, 238, 0.45);
+color: #ffffff;
+}
+/* ==========================================
+7. RESPONSIVE STYLES
+========================================== */
+@media (max-width: 900px) {
+header {
+flex-direction: column;
+align-items: flex-start;
+padding: 15px 20px;
+}
+nav {
+justify-content: flex-start;
+}
+.dropdown-toggle {
+min-width: 40px;
+min-height: 40px;
+font-size: 16px;
+}
+section {
+margin: 18px 15px;
+padding: 22px;
+}
+footer {
+padding: 15px 20px;
+}
+}
+@media (max-width: 600px) {
+body {
+background-attachment: scroll;
+}
+body::before {
+height: 62vh;
+background-size: 48px 48px;
+opacity: 0.4;
+animation: none;
+}
+body::after {
+opacity: 0.6;
+animation: none;
+}
+header {
+-webkit-backdrop-filter: none;
+backdrop-filter: none;
+}
+.logo-title-container h1 {
+font-size: 24px;
+}
+.csclw-img-logo {
+width: 64px;
+height: 64px;
+}
+nav {
+gap: 4px;
+}
+nav a {
+padding: 8px 12px;
+font-size: 14px;
+}
+.dropdown-content {
+min-width: 210px;
+}
+section {
+padding: 18px;
+}
+.data-table {
+min-width: 620px;
+}
+}
+@media (prefers-reduced-motion: reduce) {
+html {
+scroll-behavior: auto;
+}
+*,
+*::before,
+*::after {
+transition-duration: 0.01ms !important;
+animation-duration: 0.01ms !important;
+animation-iteration-count: 1 !important;
+}
+}
+/* Interactive Peripherals List */
+.peripheral-list {
+display: flex;
+flex-direction: column;
+gap: 12px;
+max-width: 850px;
+margin: 25px auto;
+}
+.peripheral-item {
+border: 1px solid rgba(255, 255, 255, 0.2);
+border-radius: 12px;
+overflow: hidden;
+background: rgba(255, 255, 255, 0.05);
+}
+.peripheral-item summary {
+padding: 18px 22px;
+cursor: pointer;
+font-size: 18px;
+font-weight: bold;
+list-style: none;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.peripheral-item summary::-webkit-details-marker {
+display: none;
+}
+.peripheral-item summary::after {
+content: "+";
+font-size: 24px;
+}
+.peripheral-item[open] summary::after {
+content: "−";
+}
+.peripheral-item:hover {
+background: rgba(130, 80, 255, 0.15);
+}
+.peripheral-info {
+display: none;
+grid-template-columns: 220px 1fr;
+gap: 20px;
+padding: 20px;
+align-items: center;
+border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+.peripheral-item:hover .peripheral-info,
+.peripheral-item[open] .peripheral-info {
+display: grid;
+}
+.peripheral-info img {
+width: 100%;
+height: 170px;
+object-fit: cover;
+border-radius: 10px;
+}
+.peripheral-info h3 {
+margin-top: 0;
+}
+.peripheral-info p {
+line-height: 1.6;
+}
+@media (max-width: 600px) {
+.peripheral-info {
+grid-template-columns: 1fr;
+}
+.peripheral-info img {
+height: 200px;
+}
+}
+/* APPLICATION SOFTWARE SHOWCASE */
+.software-showcase {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 25px;
+margin-top: 30px;
+}
+.software-card {
+background: #eaf2f9;
+border-radius: 18px;
+overflow: hidden;
+border: 1px solid rgba(105, 60, 180, 0.2);
+border-left: 5px solid #421078;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+text-align: left;
+}
+.software-card:hover {
+transform: translateY(-7px);
+box-shadow: 0 12px 28px rgba(100, 50, 180, 0.25);
+}
+.software-card img {
+width: 100%;
+height: 190px;
+object-fit: cover;
+display: block;
+}
+.software-card-content {
+padding: 22px;
+}
+.software-card h3 {
+color: #245675;
+font-size: 21px;
+margin: 0 0 12px;
+}
+.software-card p {
+color: #444;
+line-height: 1.6;
+}
+.software-card details {
+margin-top: 15px;
+border-top: 1px solid rgba(50, 50, 50, 0.15);
+padding-top: 12px;
+}
+.software-card summary {
+color: #50128b;
+font-weight: bold;
+cursor: pointer;
+padding: 8px 0;
+}
+.software-card summary:hover {
+color: #8b45ce;
+}
+.software-extra {
+padding-top: 10px;
+}
+.software-extra p {
+font-size: 15px;
+margin-bottom: 12px;
+}
+@media (max-width: 650px) {
+.software-showcase {
+grid-template-columns: 1fr;
+gap: 20px;
+}
+.software-card img {
+height: 210px;
+}
+}

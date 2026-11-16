@@ -1,0 +1,205 @@
+ 
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="icon" type="image/jpeg" href="logo.jpg"> 
+    <title>Importance - Computer Systems and Components Learning Website</title> 
+    <meta name="description" content="Understand why computer components matter and learn 
+recommended PC maintenance steps."> 
+    <link rel="stylesheet" href="style.css"> 
+ 
+    <style> 
+        .importance-image { 
+            width: 100%; 
+            height: 220px; 
+            object-fit: cover; 
+            border-radius: 12px; 
+            margin-bottom: 15px; 
+        } 
+ 
+        .importance-card { 
+            overflow: hidden; 
+        } 
+ 
+        .maintenance-item { 
+            margin-bottom: 25px; 
+        } 
+ 
+        .maintenance-item img { 
+            width: 100%; 
+            max-width: 450px; 
+            height: 230px; 
+            object-fit: cover; 
+            border-radius: 12px; 
+            margin: 12px 0; 
+        } 
+    </style> 
+</head> 
+ 
+<body> 
+ 
+    <header class="header"> 
+        <div class="logo-title-container"> 
+            <img src="logo.jpg" alt="CSCLW Logo" class= "csclw-img-logo" width="90" height="90"> 
+            <div> 
+                <h1>CSCLW</h1> 
+                <p>Computer Systems and Components Learning Website</p> 
+            </div> 
+        </div> 
+ 
+        <nav> 
+            <a href="index.html">Home</a> 
+ 
+            <div class="dropdown"> 
+                <a href="hardware.html">Hardware</a> 
+                <details class="dropdown-details" name="nav-dropdowns"> 
+                    <summary class="dropdown-toggle" aria-label="Show Hardware sections"><span 
+aria-hidden="true">▾</span></summary> 
+                    <div class="dropdown-content" id="hardware-menu"> 
+                        <a href="hardware.html#processing">Processing Units</a> 
+                        <a href="hardware.html#storage">Storage &amp; Memory</a> 
+                        <a href="hardware.html#peripherals">Peripherals</a> 
+                    </div> 
+                </details> 
+            </div> 
+ 
+            <div class="dropdown"> 
+                <a href="software.html">Software</a> 
+                <details class="dropdown-details" name="nav-dropdowns"> 
+                    <summary class="dropdown-toggle" aria-label="Show Software sections"><span 
+aria-hidden="true">▾</span></summary> 
+                    <div class="dropdown-content" id="software-menu"> 
+                        <a href="software.html#os">Operating Systems</a> 
+                        <a href="software.html#apps">Applications</a> 
+                    </div> 
+                </details> 
+            </div> 
+ 
+            <div class="dropdown"> 
+                <a href="importance.html" class="active" aria-current="page">Importance</a> 
+                <details class="dropdown-details" name="nav-dropdowns"> 
+                    <summary class="dropdown-toggle" aria-label="Show Importance sections"><span 
+aria-hidden="true">▾</span></summary> 
+                    <div class="dropdown-content" id="importance-menu"> 
+                        <a href="importance.html#efficiency">System Efficiency</a> 
+                        <a href="importance.html#maintenance">Maintenance Steps</a> 
+                    </div> 
+                </details> 
+            </div> 
+ 
+            <a href="references.html">References</a> 
+        </nav> 
+    </header> 
+ 
+    <main> 
+ 
+        <section id="efficiency"> 
+            <h2>Why Are Computer Components Important?</h2> 
+            <p> 
+                Every computer component performs a critical function. Understanding 
+                how hardware and software work together helps ensure optimal computer 
+                speed, smooth multitasking, and extended hardware lifespan. 
+            </p> 
+ 
+            <div class="components"> 
+ 
+                <div class="card importance-card"> 
+                    <h3>Hardware Performance</h3> 
+                    <p> 
+                        Hardware components such as the CPU, RAM, and storage devices 
+                        work together to process information, run programs, and store data. 
+                    </p> 
+                </div> 
+ 
+                <div class="card importance-card"> 
+                    <h3>System Efficiency</h3> 
+                    <p> 
+                        Properly functioning components allow computers to perform 
+                        tasks efficiently, reduce delays, and support multitasking. 
+                    </p> 
+                </div> 
+ 
+                <div class="card importance-card"> 
+                    <h3>Productivity and Reliability</h3> 
+                    <p> 
+                        Reliable computer systems help users complete schoolwork, 
+                        professional tasks, communication, and other activities. 
+                    </p> 
+                </div> 
+ 
+            </div> 
+        </section> 
+ 
+        <section id="maintenance"> 
+            <h2>Recommended Steps for PC Maintenance</h2> 
+            <p> 
+                Regular computer maintenance helps keep a device working properly, 
+                improves performance, and prevents common technical problems. 
+            </p> 
+ 
+            <ol class="custom-ordered-list"> 
+ 
+                <li class="maintenance-item"> 
+                    <h3>Keep Your Operating System Updated</h3> 
+                    <img src="image/update.jpeg" 
+                         alt="Computer displaying a software update"> 
+                    <p> 
+                        Install operating system updates and device driver updates 
+                        regularly to improve performance, compatibility, and security. 
+                    </p> 
+                </li> 
+ 
+                <li class="maintenance-item"> 
+                    <h3>Clean Your Computer Regularly</h3> 
+                    <img src="image/cleaning.jpeg" 
+                         alt="Cleaning the exterior of a desktop computer"> 
+                    <p> 
+                        Keep the computer and its surroundings clean. Dust buildup 
+                        can affect airflow and contribute to overheating. 
+                    </p> 
+                </li> 
+ 
+                <li class="maintenance-item"> 
+                    <h3>Use Antivirus Protection</h3> 
+                    <img src="image/virus.jpeg" 
+                         alt="Antivirus protection on a computer screen"> 
+                    <p> 
+                        Use trusted security software and perform regular scans 
+                        to help protect your files and system from malware. 
+                    </p> 
+                </li> 
+ 
+                <li class="maintenance-item"> 
+                    <h3>Manage Your Storage Space</h3> 
+                    <img src="image/storage.jpeg"
+                         alt="Computer storage and file management"> 
+                    <p> 
+                        Remove unnecessary files and uninstall applications 
+                        that are no longer needed to free up storage space. 
+                    </p> 
+                </li> 
+ 
+                <li class="maintenance-item"> 
+                    <h3>Use a Surge Protector</h3> 
+                    <img src="image/avr.jpg" 
+                         alt="Surge protector connected to computer equipment"> 
+                    <p> 
+                        Connect your computer to a suitable surge protector 
+                        to help protect it from sudden voltage spikes. 
+                    </p> 
+                </li> 
+ 
+            </ol> 
+        </section> 
+ 
+    </main> 
+ 
+    <footer> 
+        <p>&copy; 2026 Computer Systems and Components Learning Website</p> 
+    </footer> 
+ 
+</body> 
+</html> 
+ 

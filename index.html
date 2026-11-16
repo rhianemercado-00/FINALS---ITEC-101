@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon para sa browser tab: Nakaturo sa logo.jpg -->
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+    <title>Computer Systems and Components Learning Website - Home</title>
+    <meta name="description" content="Learn about computer systems, hardware, software, and PC maintenance with CSCLW.[cite: 18]">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- dagdag style para sa Homepage -->
+    <style>
+        main {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 30px 25px;
+            box-sizing: border-box;
+        }
+        main section {
+            margin-bottom: 35px;
+        }
+        main h2 {
+            color: #32105e;
+            margin-bottom: 15px;
+        }
+        /* Estilo ng Hero Section sa Itaas */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            padding: 55px 40px;
+            border-radius: 18px;
+            background: linear-gradient(120deg, rgba(45, 10, 91, 0.95), rgba(17, 35, 83, 0.95));
+            color: white;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        .hero-content { flex: 1; }
+        .hero-content h2 { color: white; font-size: clamp(28px, 4vw, 45px); line-height: 1.2; margin-bottom: 18px; }
+        .hero-content p { color: #e2d8f5; line-height: 1.8; margin-bottom: 25px; }
+        .hero-button {
+            display: inline-block;
+            padding: 13px 25px;
+            background: #a855f7;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .hero-button:hover { background: #c084fc; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(168,85,247,0.4); }
+        .hero-visual { flex: 0 0 230px; display: flex; justify-content: center; align-items: center; }
+        .hero-visual .computer-icon { font-size: 130px; filter: drop-shadow(0 0 20px #a855f7); }
+        
+        /* Grid para sa Intro */
+        .intro-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .info-card { background: rgba(255,255,255,0.94); padding: 25px; border-radius: 13px; box-shadow: 0 5px 18px rgba(0,0,0,0.15); transition: 0.3s; }
+        .info-card:hover { transform: translateY(-5px); }
+        .info-card p { line-height: 1.7; color: #444; }
+
+        /* Pamagat ng Seksyon */
+        .section-heading { color: white; text-align: center; margin-bottom: 25px; }
+        .section-heading h2 { color: white; font-size: 27px; margin-bottom: 8px; }
+        .section-heading p { color: #d6c7ee; }
+
+        /* Mga Komponent ng Computer */
+        .components-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+        .component-card { background: rgba(255,255,255,0.95); border: 1px solid rgba(190,150,255,0.5); border-radius: 14px; padding: 25px 15px; text-align: center; transition: 0.3s; }
+        .component-card:hover { transform: translateY(-7px); box-shadow: 0 8px 22px rgba(168,85,247,0.3); }
+        .component-icon { font-size: 45px; margin-bottom: 12px; }
+        .component-card h3 { color: #461477; margin-bottom: 10px; }
+        .component-card p { color: #555; font-size: 14px; line-height: 1.6; }
+        .learn-link { display: inline-block; margin-top: 12px; color: #792ac2; text-decoration: none; font-weight: bold; font-size: 13px; }
+        .learn-link:hover { text-decoration: underline; }
+
+        /* Paano Gumagana ang Computer */
+        .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+        .process-card { background: linear-gradient(145deg, #28104e, #17234d); color: white; text-align: center; padding: 25px 12px; border-radius: 13px; border: 1px solid #7544ad; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .process-card .process-icon { font-size: 38px; margin-bottom: 12px; }
+        .process-card h3 { color: #d8b4fe; margin-bottom: 8px; }
+        .process-card p { color: #e1d8ee; font-size: 13px; line-height: 1.6; }
+
+        /* Hardware kumpara sa Software */
+        .comparison-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .comparison-card { background: rgba(255,255,255,0.95); padding: 28px; border-radius: 14px; text-align: center; border-top: 5px solid #9333ea; box-shadow: 0 5px 18px rgba(0,0,0,0.15); }
+        .comparison-card .comparison-icon { font-size: 50px; margin-bottom: 12px; }
+        .comparison-card h3 { color: #461477; margin-bottom: 10px; }
+        .comparison-card p { color: #555; line-height: 1.7; }
+
+        /* Mga Kaalaman (Did You Know) */
+        .facts-section { background: linear-gradient(120deg, #25104c, #14234f); padding: 30px; border-radius: 15px; color: white; border: 1px solid #7544ad; }
+        .facts-section h2 { color: #d8b4fe; }
+        .facts-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; list-style: none; padding: 0; }
+        .facts-list li { padding: 15px; background: rgba(255,255,255,0.09); border-radius: 9px; color: #eee5fa; line-height: 1.6; }
+
+        /* Call to Action sa Baba */
+        .bottom-cta { text-align: center; padding: 35px 20px; background: rgba(255,255,255,0.94); border-radius: 15px; }
+        .bottom-cta h2 { color: #461477; }
+        .bottom-cta p { color: #555; margin-bottom: 20px; }
+
+        /* Responsive para sa Mobile Screen */
+        @media (max-width: 768px) {
+            main { padding: 20px 15px; }
+            .hero { flex-direction: column; text-align: center; padding: 35px 20px; }
+            .hero-visual { flex-basis: auto; }
+            .hero-visual .computer-icon { font-size: 90px; }
+            .components-grid, .process-grid { grid-template-columns: repeat(2, 1fr); }
+            .intro-grid, .comparison-grid { grid-template-columns: 1fr; }
+            .facts-list { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER SECTION: Naglalaman ng logo at pangunahing menu -->
+    <header class="header">
+        <div class="logo-title-container">
+            <img src="logo.jpg" alt="CSCLW Logo" class="csclw-img-logo" width="90" height="90">
+            <div>
+                <h1>CSCLW</h1>
+                <p>Computer Systems and Components Learning Website</p>
+            </div>
+        </div>
+        
+        <!-- NAVIGATION BAR: Mga page ng website -->
+        <nav>
+            <a href="index.html" class="active" aria-current="page">Home</a>
+            <div class="dropdown">
+                <a href="hardware.html">Hardware</a>
+                <details class="dropdown-details" name="nav-dropdowns">
+                    <summary class="dropdown-toggle" aria-label="Show Hardware sections"><span aria-hidden="true">▾</span></summary>
+                    <div class="dropdown-content" id="hardware-menu">
+                        <a href="hardware.html#processing">Processing Units</a>
+                        <a href="hardware.html#storage">Storage &amp; Memory</a>
+                        <a href="hardware.html#peripherals">Peripherals</a>
+                    </div>
+                </details>
+            </div>
+            <div class="dropdown">
+                <a href="software.html">Software</a>
+                <details class="dropdown-details" name="nav-dropdowns">
+                    <summary class="dropdown-toggle" aria-label="Show Software sections"><span aria-hidden="true">▾</span></summary>
+                    <div class="dropdown-content" id="software-menu">
+                        <a href="software.html#os">Operating Systems</a>
+                        <a href="software.html#apps">Applications</a>
+                    </div>
+                </details>
+            </div>
+            <div class="dropdown">
+                <a href="importance.html">Importance</a>
+                <details class="dropdown-details" name="nav-dropdowns">
+                    <summary class="dropdown-toggle" aria-label="Show Importance sections"><span aria-hidden="true">▾</span></summary>
+                    <div class="dropdown-content" id="importance-menu">
+                        <a href="importance.html#efficiency">System Efficiency</a>
+                        <a href="importance.html#maintenance">Maintenance Steps</a>
+                    </div>
+                </details>
+            </div>
+            <a href="references.html">References</a>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT: Lahat ng info sa homepage -->
+    <main>
+        <!-- 1. Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h2>Explore the World of Computer Systems</h2>
+                <p>Discover the essential components of computers and understand how hardware and software work together to make modern technology possible.</p>
+                <a href="hardware.html" class="hero-button">Start Learning →</a>
+            </div>
+            <div class="hero-visual">
+                <div class="computer-icon">💻</div>
+            </div>
+        </section>
+
+        <!-- 2. Welcome and Overview -->
+        <section class="intro-grid">
+            <div class="info-card">
+                <h2>Welcome to Our Website!</h2>
+                <p>Welcome to our educational website about Computer Systems and Components. Here, you will learn about the different parts of a computer, their functions, and how hardware and software work together to process information efficiently.</p>
+            </div>
+            <div class="info-card">
+                <h2>What is a Computer System?</h2>
+                <p>A computer system is an electronic system that accepts data, processes information, stores files, and produces useful results. It consists of hardware, software, and users.</p>
+            </div>
+        </section>
+
+        <!-- 3. Featured Computer Components -->
+        <section id="featured-components">
+            <div class="section-heading">
+                <h2>Explore Computer Components</h2>
+                <p>Get to know the essential parts of a computer and their functions.</p>
+            </div>
+            <div class="components-grid">
+                <div class="component-card">
+                    <div class="component-icon">🧠</div>
+                    <h3>CPU</h3>
+                    <p>The Central Processing Unit executes instructions and processes data.</p>
+                    <a href="hardware.html#processing" class="learn-link">Learn More →</a>
+                </div>
+                <div class="component-card">
+                    <div class="component-icon">💾</div>
+                    <h3>RAM</h3>
+                    <p>Random Access Memory temporarily holds data that the computer is currently using.</p>
+                    <a href="hardware.html#storage" class="learn-link">Learn More →</a>
+                </div>
+                <div class="component-card">
+                    <div class="component-icon">🔌</div>
+                    <h3>Motherboard</h3>
+                    <p>The main circuit board that connects and allows components to communicate.</p>
+                    <a href="hardware.html#processing" class="learn-link">Learn More →</a>
+                </div>
+                <div class="component-card">
+                    <div class="component-icon">🗄</div>
+                    <h3>Storage</h3>
+                    <p>Stores files, programs, and other information for future use.</p>
+                    <a href="hardware.html#storage" class="learn-link">Learn More →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. How a Computer Works -->
+        <section id="computer-process">
+            <div class="section-heading">
+                <h2>How Does a Computer Work?</h2>
+                <p>A computer follows four basic stages to process information.</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-icon">⌨️</div>
+                    <h3>1. Input</h3>
+                    <p>Receives data and instructions from the user.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-icon">⚙️</div>
+                    <h3>2. Processing</h3>
+                    <p>Processes the received data using the CPU.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-icon">🖥</div>
+                    <h3>3. Output</h3>
+                    <p>Displays the processed information to the user.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-icon">💽</div>
+                    <h3>4. Storage</h3>
+                    <p>Saves data and information for future access.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Hardware vs Software -->
+        <section id="hardware-software">
+            <div class="section-heading">
+                <h2>Hardware vs. Software</h2>
+                <p>Two essential elements that work together in every computer system.</p>
+            </div>
+            <div class="comparison-grid">
+                <div class="comparison-card">
+                    <div class="comparison-icon">🖥</div>
+                    <h3>Computer Hardware</h3>
+                    <p>Hardware refers to the physical components of a computer that can be seen and touched, such as the monitor, keyboard, CPU, and mouse.</p>
+                    <a href="hardware.html" class="learn-link">Explore Hardware →</a>
+                </div>
+                <div class="comparison-card">
+                    <div class="comparison-icon">💿</div>
+                    <h3>Computer Software</h3>
+                    <p>Software refers to programs and instructions that tell a computer how to perform tasks, such as operating systems and applications.</p>
+                    <a href="software.html" class="learn-link">Explore Software →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Did You Know -->
+        <section class="facts-section">
+            <h2>💡 Did You Know?</h2>
+            <p>Here are some interesting facts about computer systems!</p>
+            <ul class="facts-list">
+                <li>🧠 The CPU is commonly called the brain of the computer because it executes instructions.</li>
+                <li>💾 RAM is temporary memory that stores data while programs are running.</li>
+                <li>🔢 Computers use binary numbers, consisting of only 0s and 1s.</li>
+                <li>⚙️ Hardware and software work together to make a computer system function.</li>
+            </ul>
+        </section>
+
+        <!-- 7. Bottom Call to Action -->
+        <section class="bottom-cta">
+            <h2>Ready to Learn More?</h2>
+            <p>Continue exploring our website and discover the importance of computer systems and components in everyday life.</p>
+            <a href="importance.html" class="hero-button">Discover Their Importance →</a>
+        </section>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+        <p>&copy; 2026 Computer Systems and Components | Educational Website</p>
+    </footer>
+</body>
+</html>

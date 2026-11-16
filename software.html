@@ -1,0 +1,377 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="icon" type="image/jpeg" href="logo.jpg"> 
+    <title>Software - Computer Systems and Components Learning Website</title> 
+    <meta name="description" content="Learn about computer software, operating systems, and 
+application programs."> 
+    <link rel="stylesheet" href="style.css"> 
+</head> 
+<body> 
+ 
+    <header class="header"> 
+        <div class="logo-title-container"> 
+            <img src="logo.jpg" alt="CSCLW Logo" class="csclw-img-logo" width="90" height="90"> 
+            <div> 
+                <h1>CSCLW</h1> 
+                <p>Computer Systems and Components Learning Website</p> 
+            </div> 
+        </div> 
+ 
+        <nav> 
+            <a href="index.html">Home</a> 
+ 
+            <div class="dropdown"> 
+                <a href="hardware.html">Hardware</a> 
+                <details class="dropdown-details" name="nav-dropdowns"> 
+                    <summary class="dropdown-toggle" aria-label="Show Hardware sections"> 
+                        <span aria-hidden="true">▾</span> 
+                    </summary> 
+                    <div class="dropdown-content" id="hardware-menu"> 
+                        <a href="hardware.html#processing">Processing Units</a> 
+                        <a href="hardware.html#storage">Storage &amp; Memory</a> 
+                        <a href="hardware.html#peripherals">Peripherals</a> 
+                    </div> 
+                </details> 
+            </div> 
+ 
+            <div class="dropdown"> 
+                <a href="software.html" class="active" aria-current="page">Software</a> 
+                <details class="dropdown-details" name="nav-dropdowns"> 
+                    <summary class="dropdown-toggle" aria-label="Show Software sections"> 
+                        <span aria-hidden="true">▾</span> 
+                    </summary> 
+                    <div class="dropdown-content" id="software-menu"> 
+                        <a href="software.html#os">Operating Systems</a> 
+                        <a href="software.html#apps">Applications</a> 
+                    </div> 
+                </details> 
+            </div> 
+ 
+            <div class="dropdown"> 
+                <a href="importance.html">Importance</a> 
+                <details class="dropdown-details" name="nav-dropdowns"> 
+                    <summary class="dropdown-toggle" aria-label="Show Importance sections"> 
+                        <span aria-hidden="true">▾</span> 
+                    </summary> 
+                    <div class="dropdown-content" id="importance-menu"> 
+                        <a href="importance.html#efficiency">System Efficiency</a> 
+                        <a href="importance.html#maintenance">Maintenance Steps</a> 
+                    </div> 
+                </details> 
+            </div> 
+ 
+            <a href="references.html">References</a> 
+        </nav> 
+    </header> 
+ 
+    <main> 
+ 
+        <section id="software-intro"> 
+            <h2>Computer Software Overview</h2> 
+            <p> 
+                Software refers to the programs and instructions that tell a computer 
+                how to perform specific tasks. Unlike hardware, software cannot be 
+                physically touched. 
+            </p> 
+ 
+            <h3>Key Software Categories:</h3> 
+            <ul class="custom-list"> 
+                <li><strong>Operating Systems:</strong> Manage computer hardware and provide a 
+platform for applications.</li> 
+                <li><strong>Application Software:</strong> Programs designed to help users perform 
+specific tasks.</li> 
+                <li><strong>Utility Software:</strong> Helps maintain, protect, and optimize computer 
+performance.</li> 
+                <li><strong>Programming Software:</strong> Tools used to create, test, and develop 
+computer programs.</li> 
+            </ul> 
+        </section> 
+ 
+        <section id="os"> 
+            <h2>Operating Systems</h2> 
+            <p> 
+                An operating system (OS) is system software that manages computer 
+                hardware and software resources. It allows users to interact with 
+                their devices and run applications. 
+            </p> 
+ 
+            <div class="components"> 
+                <div class="card"> 
+                    <h3>Windows</h3> 
+                    <p> 
+                        A widely used operating system developed by Microsoft. 
+                        It supports various applications, games, and productivity tools. 
+                    </p> 
+                </div> 
+ 
+                <div class="card"> 
+                    <h3>Linux</h3> 
+                    <p> 
+                        An open-source operating system known for its flexibility, 
+                        security, and use in servers and development environments. 
+                    </p> 
+                </div> 
+ 
+                <div class="card"> 
+                    <h3>macOS</h3> 
+                    <p> 
+                        Apple's operating system designed for Mac computers, 
+                        known for its integration with Apple devices. 
+                    </p> 
+                </div> 
+            </div> 
+        </section> 
+ 
+         
+<section id="apps"> 
+    <h2>Application Software</h2> 
+ 
+    <p> 
+        Application software consists of programs that allow users to 
+        accomplish specific tasks, such as creating documents, browsing 
+        the internet, editing images, and communicating. 
+    </p> 
+ 
+    <div class="software-showcase"> 
+ 
+        <div class="software-card"> 
+            <img src="image/productivity.jpeg" alt="Productivity software"> 
+ 
+            <div class="software-card-content"> 
+                <h3>Productivity Software</h3> 
+                <p> 
+                    Create documents, spreadsheets, and presentations 
+                    using digital productivity tools. 
+                </p> 
+                <details> 
+                    <summary>Learn More</summary> 
+                    <div class="software-extra"> 
+                        <p><strong>Definition:</strong> Programs that help users create, organize, and 
+manage information.</p> 
+                        <p><strong>Purpose:</strong> Improve efficiency when completing school, 
+office, and personal tasks.</p> 
+                        <p><strong>Examples:</strong> Microsoft Word, Excel, and PowerPoint.</p> 
+                        <p><strong>Origin:</strong> Developed alongside personal computers. 
+Microsoft Word was first released in 1983.</p> 
+                    </div> 
+                </details> 
+            </div> 
+        </div> 
+ 
+        <div class="software-card"> 
+            <img src="image/web.jpeg" alt="Web browser"> 
+ 
+            <div class="software-card-content"> 
+                <h3>Web Browsers</h3> 
+                <p> 
+                    Access websites, search for information, and 
+                    explore different resources on the internet. 
+                </p> 
+                <details> 
+                    <summary>Learn More</summary> 
+                    <div class="software-extra"> 
+                        <p><strong>Definition:</strong> Applications used to access and display 
+websites.</p> 
+                        <p><strong>Purpose:</strong> Allow users to browse the internet and use 
+online services.</p> 
+                        <p><strong>Examples:</strong> Google Chrome, Mozilla Firefox, and Microsoft 
+Edge.</p> 
+                        <p><strong>Origin:</strong> The first web browser, WorldWideWeb, was 
+developed by Tim Berners-Lee in 1990.</p> 
+                    </div> 
+                </details> 
+            </div> 
+        </div> 
+ 
+        <div class="software-card"> 
+            <img src="image/graphics.jpeg" alt="Graphics software"> 
+ 
+            <div class="software-card-content"> 
+                <h3>Graphics Software</h3> 
+                <p> 
+                    Create and edit digital images, illustrations, 
+                    photographs, and visual designs. 
+                </p> 
+                <details> 
+                    <summary>Learn More</summary> 
+                    <div class="software-extra"> 
+                        <p><strong>Definition:</strong> Programs used to create, edit, and manipulate 
+digital graphics.</p> 
+                        <p><strong>Purpose:</strong> Help users produce digital artwork, 
+advertisements, and designs.</p> 
+                        <p><strong>Examples:</strong> Adobe Photoshop, Canva, and Adobe 
+Illustrator.</p> 
+                        <p><strong>Origin:</strong> Digital graphics programs developed as computers 
+gained the ability to process images. Adobe Photoshop was released in 1990.</p> 
+                    </div> 
+                </details> 
+            </div> 
+        </div> 
+ 
+        <div class="software-card"> 
+            <img src="image/multi.jpeg" alt="Multimedia software"> 
+ 
+            <div class="software-card-content"> 
+                <h3>Multimedia Software</h3> 
+                <p> 
+                    Play, create, and edit audio and video files 
+                    for entertainment and creative projects. 
+                </p> 
+                <details> 
+                    <summary>Learn More</summary> 
+                    <div class="software-extra"> 
+                        <p><strong>Definition:</strong> Applications that manage and process audio 
+and video content.</p> 
+                        <p><strong>Purpose:</strong> Allow users to watch videos, listen to music, and 
+edit multimedia projects.</p> 
+                        <p><strong>Examples:</strong> VLC Media Player and video editing 
+applications.</p> 
+                        <p><strong>Origin:</strong> Multimedia software expanded with the 
+development of digital audio and video technologies.</p> 
+                    </div> 
+                </details> 
+            </div> 
+        </div> 
+ 
+        <div class="software-card"> 
+            <img src="image/comms.jpeg" alt="Communication software"> 
+ 
+            <div class="software-card-content"> 
+                <h3>Communication Software</h3> 
+                <p> 
+                    Connect with other people through messaging, 
+                    voice calls, and video conferences. 
+                </p> 
+                <details> 
+                    <summary>Learn More</summary> 
+                    <div class="software-extra"> 
+                        <p><strong>Definition:</strong> Programs that allow users to exchange 
+messages and information digitally.</p> 
+                        <p><strong>Purpose:</strong> Support online communication, collaboration, 
+and remote meetings.</p> 
+                        <p><strong>Examples:</strong> Zoom, Microsoft Teams, and Discord.</p> 
+                        <p><strong>Origin:</strong> Developed alongside computer networking and 
+early electronic messaging systems.</p> 
+                    </div> 
+                </details> 
+            </div> 
+        </div> 
+ 
+        <div class="software-card"> 
+            <img src="image/educ.jpeg" alt="Educational software"> 
+ 
+            <div class="software-card-content"> 
+                <h3>Educational Software</h3> 
+                <p> 
+                    Support teaching and learning through digital 
+                    lessons, quizzes, and interactive activities. 
+                </p> 
+                <details> 
+                    <summary>Learn More</summary> 
+                    <div class="software-extra"> 
+                        <p><strong>Definition:</strong> Programs designed to support education, 
+training, and learning.</p> 
+                        <p><strong>Purpose:</strong> Help students learn through digital lessons, 
+tutorials, and activities.</p> 
+                        <p><strong>Examples:</strong> Duolingo, Google Classroom, and educational 
+applications.</p> 
+                        <p><strong>Origin:</strong> Early computer-assisted learning systems included 
+PLATO, which began development in 1960.</p> 
+                    </div> 
+                </details> 
+            </div> 
+        </div> 
+ 
+        <div class="software-card"> 
+            <img src="image/business.jpeg" alt="Business software"> 
+ 
+            <div class="software-card-content"> 
+                <h3>Business Software</h3> 
+                <p> 
+                    Manage business activities, financial records, 
+                    inventory, and organizational operations. 
+                </p> 
+                <details> 
+                    <summary>Learn More</summary> 
+                    <div class="software-extra"> 
+                        <p><strong>Definition:</strong> Programs designed to support business 
+operations and management.</p> 
+                        <p><strong>Purpose:</strong> Help organizations manage accounting, sales, 
+records, and inventory.</p> 
+                        <p><strong>Examples:</strong> QuickBooks, SAP, and Microsoft 
+Dynamics.</p> 
+                        <p><strong>Origin:</strong> Business software expanded with the introduction 
+of personal computers and office computing applications.</p> 
+                    </div> 
+                </details> 
+            </div> 
+        </div> 
+ 
+    </div> 
+</section> 
+ 
+ 
+                <div class="card"> 
+                    <h3>Multimedia Software</h3> 
+                    <p> 
+                        Allows users to play, create, and edit audio and video files. 
+                        Examples include VLC Media Player and video editing applications. 
+                    </p> 
+                </div> 
+ 
+                <div class="card"> 
+                    <h3>Communication Software</h3> 
+                    <p> 
+                        Helps people communicate through messaging, voice calls, 
+                        and video conferences. Examples include Zoom and Microsoft Teams. 
+                    </p> 
+                </div> 
+ 
+                <div class="card"> 
+                    <h3>Educational Software</h3> 
+                    <p> 
+                        Supports teaching and learning through digital lessons, 
+                        interactive activities, and educational programs. 
+                    </p> 
+                </div> 
+            </div> 
+        </section> 
+ 
+        <section id="software-types"> 
+            <h2>System Software vs. Application Software</h2> 
+            <p> 
+                Computer software can be divided into two major types based on 
+                their purpose and functions. 
+            </p> 
+ 
+            <div class="components"> 
+                <div class="card"> 
+                    <h3>System Software</h3> 
+                    <p> 
+                        Manages computer hardware and provides the environment 
+                        needed for other software to operate. Examples include 
+                        operating systems and device drivers. 
+                    </p> 
+                </div> 
+ 
+                <div class="card"> 
+                    <h3>Application Software</h3> 
+                    <p> 
+                        Helps users perform specific activities and tasks. 
+                        Examples include word processors, web browsers, and games. 
+                    </p> 
+                </div> 
+            </div> 
+        </section> 
+ 
+    </main> 
+ 
+    <footer> 
+        <p>&copy; 2026 CSCLW - Computer Systems and Components Learning Website</p> 
+    </footer> 
+ 
+</body> 
+</html> 
